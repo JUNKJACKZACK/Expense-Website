@@ -1,1 +1,4 @@
 <h1>Welcome to Expense Website</h1>
+    <% if @user %>
+        Logged in as: <%= @user.email %>
+    <% end %>
