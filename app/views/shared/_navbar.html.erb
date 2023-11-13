@@ -1,0 +1,38 @@
+<nav class="nav-bar">
+    <div class="nav-brand">
+        <div class="nav-logo">
+            <h3>Expense Tracker</h3>
+        </div>
+    </div>
+    <div class="nav-menu">
+        <ul class="nav-links">
+            <li class="nav-item">
+                <!-- The border tag gets rid of a blue bootstrap border --> 
+                <%= button_to "New Expense", expenses_path, method: :get, class: "new-expense btn btn-primary btn-sm border-0" %>
+            </li>
+
+            <li class="nav-item"><a href="test">All Records</li>
+            <li class="nav-item"><a href="google.com">Information</li>
+
+            <% if Current.user %>
+                <li class="nav-user">
+                    <span class="navbar-text">
+                        <%= Current.user.email %>
+                    </span>
+                </li>
+                
+                <li>
+                    <%= button_to "Logout", logout_path, method: :delete, class: "logout btn btn-primary btn-sm border-0"%>
+                </li>
+            
+            <% else %>
+                <li class="nav-item">
+                    <%= link_to "Sign In", sign_in_path %>
+                </li>
+                <li class="nav-item">
+                    <%= link_to "Sign Up", sign_up_path %>
+                </li>
+            <% end %>
+        </ul>
+    </div>
+</nav>

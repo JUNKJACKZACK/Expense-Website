@@ -1,17 +1,35 @@
-<h1>Sign In</h1>
+<style type="text/css">
+    .sign-in {
+        margin: 20px;
+    }
 
-<%= form_with url: sign_in_path do |form| %>
-    <div>
-        <%= form.label :email %>
-        <%= form.text_field :email %>
-    </div>
+    .info-notice {
+        margin: 20px;
+        padding-top: 40px;
+    }
+</style>
+<div class="account-page">
+    <div class="sign-in">
+        <h1>Sign In</h1>
 
-    <div>
-        <%= form.label :password %>
-        <%= form.text_field :password %>
-    </div>
+        <%= form_with url: sign_in_path do |form| %>
+            <div>
+                <%= form.label :email %>
+                <%= form.text_field :email %>
+            </div>
 
-    <div>
-        <%= form.submit "Sign In"%>
+            <div>
+                <%= form.label :password %>
+                <%= form.text_field :password %>
+            </div>
+
+            <div>
+                <%= form.submit "Sign In" %>
+            </div>
+        <% end %>
     </div>
-<% end %>
+    <div class="info-notice">
+        <h6>Need an account?</h6>
+        <%= button_to "Sign Up", sign_up_path %>
+    </div>
+</div>

@@ -16,3 +16,69 @@
 
 
  @import 'bootstrap';
+
+.nav-bar {
+	display: flex;
+	justify-content: space-between;
+	background-color: #073B4C;
+	height: 50px;
+	width: 100%;
+}
+
+.nav-logo h3 {
+	text-decoration: none;
+	color: whitesmoke;
+	padding: 10px;
+}
+
+.nav-menu {
+	margin-left: auto;
+}
+
+.nav-links li{
+	display: inline-block;
+	padding: 10px;
+}
+
+.nav-links li:hover {
+	transform: scale(1.2);
+}
+
+.nav-links a{
+	text-decoration: none;
+	font-size: 90%;
+	color: whitesmoke;
+}
+
+.nav-links a:hover {
+	color: #FFD166;
+}
+
+.new-expense {
+	background-color: #06D6A0;
+}
+
+.new-expense a {
+	color: #073B4C;
+}
+
+.new-expense:hover {
+	background-color: #06D6A0;
+}
+
+.logout {
+	background-color: whitesmoke;
+	color: #073B4C;
+}
+
+.logout:hover {
+	background-color: #EF476F;
+	color: whitesmoke;
+}
+
+
+@media only screen and (max-width: 540px) {
+  .nav-menu {
+
+  }
+}
